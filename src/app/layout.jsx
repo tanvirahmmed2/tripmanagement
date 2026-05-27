@@ -1,4 +1,5 @@
 
+import { ContextProvider } from "@/component/Context";
 import "./globals.css";
 
 
@@ -9,11 +10,14 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html
-      lang="en"
-      className={` h-full antialiased`}
-    >
-      <body className="min-h-full flex flex-col">{children}</body>
+    <html lang="en">
+      <body>
+        <main>
+          <ContextProvider>
+            {children}
+          </ContextProvider>
+        </main>
+      </body>
     </html>
   );
 }
