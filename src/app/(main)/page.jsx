@@ -1,7 +1,9 @@
-export default function HomePage() {
+import React from 'react'
+
+const HomePage = () => {
   return (
-    <main>
-      <h1>Welcome to Trip Management</h1>
-    </main>
-  );
+    <div>HomePage</div>
+  )
 }
+
+export default HomePage
